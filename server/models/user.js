@@ -16,5 +16,6 @@ const userSchema = new Schema({
 });
 
 // TODO: Need to add validations from passport into mongoose
+// TODO: Need to add session tokens as well
 
 export default mongoose.model('User', userSchema);
