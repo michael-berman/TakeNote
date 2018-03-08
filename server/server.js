@@ -7,9 +7,12 @@ const app = express();
 
 require('dotenv').config({ path: './variables.env' });
 
+app.use(express.static(path.join(__dirname, '../client/stylesheets')));
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
+
 
 app.listen(process.env.PORT, () => {
   console.log(`listening on port ${process.env.PORT}`);
