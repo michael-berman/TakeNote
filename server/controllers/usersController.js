@@ -1,5 +1,8 @@
-const User = require('./user');
-const bodyParser = require('bodyParser');
+// const User = require('./user');
+// const bodyParser = require('bodyParser');
+import User from './user';
+import bodyParser from 'bodyParser';
+
 
 // index
 exports.getUsers = (req, res) => {
