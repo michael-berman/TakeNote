@@ -8,7 +8,7 @@ const app = express();
 require('dotenv').config({ path: './variables.env' });
 
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, './client', 'index.html'));
+  res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
 
 app.listen(process.env.PORT, () => {
