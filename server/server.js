@@ -5,7 +5,9 @@ import http from 'http';
 
 const app = express();
 
-require('dotenv').config({ path: './variables.env' });
+require('dotenv').config({
+  path: './variables.env'
+});
 
 app.use(express.static(path.join(__dirname, '../client/stylesheets')));
 

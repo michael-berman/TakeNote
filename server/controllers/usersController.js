@@ -22,7 +22,7 @@ exports.getUser = (req, res) => {
 
 // Post
 exports.createUser = (req, res) => {
-  const newUser = new User ({
+  const newUser = new User({
     // TODO: input user parameters
   });
   newUser.save().then(() => {
