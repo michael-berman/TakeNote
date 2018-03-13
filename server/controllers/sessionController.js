@@ -1,5 +1,5 @@
-import User from './models/user';
-import bodyParser from 'bodyParser';
+import User from '../models/user';
+import bodyParser from 'body-parser';
 // TODO: import mongoose for creating a user
 
 // login

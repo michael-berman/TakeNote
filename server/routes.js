@@ -2,7 +2,7 @@ import express from 'express';
 import sessionController from './controllers/sessionController';
 import usersController from './controllers/usersController';
 
-const router = express.router;
+const router = express.Router();
 
 // session routes
 router.post('/session', sessionController.loginUser);
