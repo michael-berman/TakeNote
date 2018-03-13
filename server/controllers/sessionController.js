@@ -1,5 +1,6 @@
 import User from './models/user';
 import bodyParser from 'bodyParser';
+// TODO: import mongoose for creating a user
 
 // login
 exports.loginUser = (req, res) => {
@@ -9,4 +10,9 @@ exports.loginUser = (req, res) => {
 // logout
 exports.logoutUser = (req, res) => {
   // TODO: Find user and logout
+};
+
+// Signup
+exports.signupUser = (req, res) => {
+  // TODO: Create User with mongoose
 };
