@@ -1,6 +1,6 @@
 // const User = require('./user');
 // const bodyParser = require('bodyParser');
-import User from './user';
+import User from './models/user';
 import bodyParser from 'bodyParser';
 
 
