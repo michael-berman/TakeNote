@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
         <form>
           <input type="text" placeholder="Email"/>
           <input type="password" placeholder="password" />
-          <button>{formButton}</button>
+          <button className="session-submit">{formButton}</button>
         </form>
       </div>
     );
