@@ -3,7 +3,9 @@ import SessionForm from './session_form';
 // TODO: import session actions
 
 const mapStatetoProps = (state) => {
-  return null;
+  return {
+    state
+  };
   // TODO: add Boolean logged in
 };
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link, withRouter, Redirect} from 'react-router-dom';
 
-class SessionForm extends React.component {
+class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     if (this.props.formType === 'login') {
@@ -25,7 +25,7 @@ class SessionForm extends React.component {
   }
 
   render() {
-    const formButton = (this.props.formType === "Signup")?
+    const formButton = (this.props.formType === "Signup") ?
       "Sign Up" : "Login";
     return (
       <div>
@@ -38,6 +38,7 @@ class SessionForm extends React.component {
     );
   }
 }
+
 // TODO: add classnames to form and input
 // TODO: add demo login
 

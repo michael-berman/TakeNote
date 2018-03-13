@@ -8,6 +8,7 @@ const App = () => {
     <div>
       <Switch>
         <Route path='/login' component={SessionFormContainer} />
+        <Route path='/signup' component={SessionFormContainer} />
       </Switch>
     </div>
   );
