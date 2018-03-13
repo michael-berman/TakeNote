@@ -1,3 +1,5 @@
+/* TODO: modulate css files and bundle into one using webpack */
+
 #root p{
   color: blue;
   background-color: black;
