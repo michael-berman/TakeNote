@@ -4,8 +4,8 @@ require('dotenv').config({
   path: './variables.env'
 });
 
-mongoose.connect = (process.env.DATABASE);
+mongoose.connect(process.env.DATABASE);
 
-const Schema = mongoose.Schema;
+const DB = mongoose;
 
-export default Schema;
+export default DB;

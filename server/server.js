@@ -14,7 +14,7 @@ require('dotenv').config({
 app.use(express.static(path.join(__dirname, '../client/stylesheets')));
 app.use(express.static(path.join(__dirname, '../client/')));
 
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {

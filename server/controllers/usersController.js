@@ -19,9 +19,15 @@ exports.getUser = (req, res) => {
 // Post
 exports.createUser = (req, res) => {
   const user = req.body.user;
-  User.create({ email: user.email }, (err, newUser) => {
+
+  const newUser = new User({
+    email: user.email,
+    created_at: Date.now(),
+    updated_at: Date.now()
+  });
+  console.log(newUser);
+  newUser.save( (err) => {
     if (err) console.log(err);
-    console.log(newUser);
-    res.redirect(303, '/');
+    res.send({});
   });
 };

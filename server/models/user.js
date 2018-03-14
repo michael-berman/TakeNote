@@ -1,5 +1,6 @@
-import mongoose from 'mongoose';
-import Schema from './db_config';
+import DB from './db_config';
+
+const Schema = DB.Schema;
 
 const userSchema = new Schema({
   email: {
@@ -17,4 +18,6 @@ const userSchema = new Schema({
 // TODO: Need to add validations from passport into mongoose
 // TODO: Need to add session tokens as well
 
-export default mongoose.model('User', userSchema);
+const User = DB.model('User', userSchema);
+
+export default User;
