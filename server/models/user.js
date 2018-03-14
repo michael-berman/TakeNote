@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
-
-const Schema = mongoose.Schema;
+import Schema from './db_config';
 
 const userSchema = new Schema({
   email: {

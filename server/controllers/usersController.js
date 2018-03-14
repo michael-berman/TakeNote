@@ -1,8 +1,4 @@
-// const User = require('./user');
-// const bodyParser = require('bodyParser');
 import User from '../models/user';
-import bodyParser from 'body-parser';
-
 
 // index
 exports.getUsers = (req, res) => {
@@ -22,10 +18,10 @@ exports.getUser = (req, res) => {
 
 // Post
 exports.createUser = (req, res) => {
-  const newUser = new User({
-    // TODO: input user parameters
-  });
-  newUser.save().then(() => {
-    res.end();
+  const user = req.body.user;
+  User.create({ email: user.email }, (err, newUser) => {
+    if (err) console.log(err);
+    console.log(newUser);
+    res.redirect(303, '/');
   });
 };

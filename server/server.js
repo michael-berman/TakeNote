@@ -3,6 +3,7 @@ import fs from 'fs';
 import express from 'express';
 import http from 'http';
 import routes from './routes';
+import bodyParser from 'body-parser';
 
 const app = express();
 
@@ -12,6 +13,9 @@ require('dotenv').config({
 
 app.use(express.static(path.join(__dirname, '../client/stylesheets')));
 app.use(express.static(path.join(__dirname, '../client/')));
+
+app.use(bodyParser.urlencoded())
+app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'));
