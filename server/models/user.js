@@ -7,6 +7,10 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
+  password: {
+    type: String,
+    required: true
+  },
   created_at: {
     type: Date
   },
@@ -15,8 +19,7 @@ const userSchema = new Schema({
   }
 });
 
-// TODO: Need to add validations from passport into mongoose
-// TODO: Need to add session tokens as well
+// TODO: Need to add validations from passport
 
 const User = DB.model('User', userSchema);
 

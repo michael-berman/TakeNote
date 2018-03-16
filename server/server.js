@@ -4,6 +4,7 @@ import express from 'express';
 import http from 'http';
 import routes from './routes';
 import bodyParser from 'body-parser';
+import passport from 'passport';
 
 const app = express();
 
