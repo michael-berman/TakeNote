@@ -5,6 +5,7 @@ import http from 'http';
 import routes from './routes';
 import bodyParser from 'body-parser';
 import passport from 'passport';
+import session from 'express-session';
 
 const app = express();
 
@@ -14,6 +15,7 @@ require('dotenv').config({
 
 app.use(express.static(path.join(__dirname, '../client/stylesheets')));
 app.use(express.static(path.join(__dirname, '../client/')));
+
 
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
