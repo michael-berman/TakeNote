@@ -20,7 +20,6 @@ app.use(session({ secret: "dogs" }));
 app.use(passport.initialize());
 app.use(passport.session());
 
-
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
 

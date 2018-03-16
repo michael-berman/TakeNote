@@ -22,10 +22,10 @@ exports.createUser = (req, res) => {
 
   const newUser = new User({
     email: user.email,
+    password: user.password,
     created_at: Date.now(),
     updated_at: Date.now()
   });
-  console.log(newUser);
   newUser.save( (err) => {
     if (err) console.log(err);
     res.send({});
