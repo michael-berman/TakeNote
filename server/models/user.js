@@ -1,4 +1,4 @@
-import DB from './db_config';
+import DB from '../config/db_config';
 import bcrypt from 'bcrypt-nodejs';
 
 const Schema = DB.Schema;
