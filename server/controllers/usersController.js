@@ -1,4 +1,5 @@
 import User from '../models/user';
+import passport from 'passport';
 
 // index
 exports.getUsers = (req, res) => {
@@ -20,14 +21,19 @@ exports.getUser = (req, res) => {
 exports.createUser = (req, res) => {
   const user = req.body.user;
 
-  const newUser = new User({
-    email: user.email,
-    password: user.password,
-    created_at: Date.now(),
-    updated_at: Date.now()
+  passport.authenticate('local-signup', {
+    successRedirect : '/profile',
+    failureRedirect : '/signup'
   });
-  newUser.save( (err) => {
-    if (err) console.log(err);
-    res.send({});
-  });
+
+  // const newUser = new User({
+  //   email: user.email,
+  //   password: user.password,
+  //   created_at: Date.now(),
+  //   updated_at: Date.now()
+  // });
+  // newUser.save( (err) => {
+  //   if (err) console.log(err);
+  //   res.send({});
+  // });
 };
