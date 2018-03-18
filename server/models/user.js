@@ -20,6 +20,14 @@ const userSchema = new Schema({
   }
 });
 
+userSchema.methods.generateHash = (password) => {
+  return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+};
+
+userSchema.methods.validPassword = (password) => {
+  return bcrypt.compareSync(password, this.local.password);
+};
+
 const User = DB.model('User', userSchema);
 
 export default User;
