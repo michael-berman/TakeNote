@@ -15,8 +15,9 @@ require('dotenv').config({
 
 app.use(express.static(path.join(__dirname, '../client/stylesheets')));
 app.use(express.static(path.join(__dirname, '../client/')));
-app.use(session({ secret: "dogs" }));
 
+require('./config/passport')(passport);
+app.use(session({ secret: "dogs" }));
 app.use(passport.initialize());
 app.use(passport.session());
 
