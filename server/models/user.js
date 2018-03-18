@@ -1,4 +1,5 @@
 import DB from './db_config';
+import bcrypt from 'bcrypt-nodejs';
 
 const Schema = DB.Schema;
 
@@ -18,8 +19,6 @@ const userSchema = new Schema({
     type: Date
   }
 });
-
-// TODO: Need to add validations from passport
 
 const User = DB.model('User', userSchema);
 
