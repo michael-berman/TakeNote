@@ -1,5 +1,8 @@
 const LocalStrategy = require('passport-local').Strategy;
+const GoogleStrategy = require('passport-google-oauth').oAuth2Strategy;
+
 const User = require('../models/user');
+const configAuth = require('./auth');
 
 module.exports = function(passport) {
 
@@ -51,5 +54,34 @@ module.exports = function(passport) {
       });
 
     }));
+
+  passport.use(new GoogleStrategy({
+    clientId : configAuth.google.clientId,
+    clientSecret: configAuth.google.clientSecret,
+    callbackUrl: configAuth.google.callbackUrl
+  },
+  function(token, refreshToken, profile, done) {
+    process.nextTick(function() {
+      User.findOne({ 'google.id': profile.id }, function(err, user) {
+        if (err) return done(err);
+        if (user) {
+          return done(null, user);
+        } else {
+          let newUser = new User();
+
+          newUser.google.id = profile.id;
+          newUser.google.token = token;
+          newUser.google.name = profile.displayName;
+          newUser.google.email = profile.emails[0].value;
+
+          newUser.save(function(err) {
+            if (err) throw err;
+            return done(null, newUser);
+          });
+        }
+      });
+    });
+  }
+  ));
 
 };
