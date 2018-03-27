@@ -19,21 +19,11 @@ exports.getUser = (req, res) => {
 
 // Post
 exports.createUser = (req, res) => {
-  const user = req.body.user;
 
+  console.log(req.body);
+  
   passport.authenticate('local-signup', {
-    successRedirect : '/profile',
+    successRedirect : '/',
     failureRedirect : '/signup'
   });
-
-  // const newUser = new User({
-  //   email: user.email,
-  //   password: user.password,
-  //   created_at: Date.now(),
-  //   updated_at: Date.now()
-  // });
-  // newUser.save( (err) => {
-  //   if (err) console.log(err);
-  //   res.send({});
-  // });
 };
