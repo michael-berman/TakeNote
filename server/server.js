@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, '../client/stylesheets')));
 app.use(express.static(path.join(__dirname, '../client/')));
 
 require('./config/passport')(passport);
-app.use(session({ secret: "dogs" }));
+app.use(session({ secret: process.env.SECRET }));
 app.use(passport.initialize());
 app.use(passport.session());
 

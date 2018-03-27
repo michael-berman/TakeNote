@@ -19,11 +19,9 @@ exports.getUser = (req, res) => {
 
 // Post
 exports.createUser = (req, res) => {
-
-  console.log(req.body);
-  
   passport.authenticate('local-signup', {
     successRedirect : '/',
-    failureRedirect : '/signup'
+    failureRedirect : '/signup',
+    failureFlash: true
   });
 };

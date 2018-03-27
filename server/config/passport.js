@@ -19,7 +19,7 @@ module.exports = function(passport) {
       passReqToCallback: true
     },
     function(req, email, password, done) {
-      console.log(email);
+
 
       process.nextTick(function() {
 
