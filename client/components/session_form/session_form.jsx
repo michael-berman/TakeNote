@@ -30,6 +30,7 @@ class SessionForm extends React.Component {
       "Sign Up" : "Login";
     return (
       <div className="session-form-wrapper">
+        <a href='/auth/google'><span class="fa fa-google-plus"></span>Google</a>
         <form className="session-form-box">
           <input type="text" value={this.state.email}
             onChange={this.update('email')}

@@ -6,7 +6,6 @@ import SessionFormContainer from './session_form/session_form_container';
 const App = () => {
   return (
     <div>
-      <a href='/auth/google'><span class="fa fa-google-plus"></span>Google</a>
       <Switch>
         <Route path='/login' component={SessionFormContainer} />
         <Route path='/signup' component={SessionFormContainer} />
