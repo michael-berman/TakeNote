@@ -4,22 +4,22 @@ import bcrypt from 'bcrypt-nodejs';
 const Schema = DB.Schema;
 
 const userSchema = new Schema({
-  local: {
-    email: {
-    type: String,
-    required: true
-    },
-    password: {
-      type: String,
-      required: true
-    },
-    created_at: {
-      type: Date
-    },
-    updated_at: {
-      type: Date
-    }
-  },
+  // local: {
+  //   email: {
+  //   type: String,
+  //   required: true
+  //   },
+  //   password: {
+  //     type: String,
+  //     required: true
+  //   },
+  //   created_at: {
+  //     type: Date
+  //   },
+  //   updated_at: {
+  //     type: Date
+  //   }
+  // },
   google : {
     id : String,
     token : String,

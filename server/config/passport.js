@@ -1,7 +1,8 @@
+import mongoose from 'mongoose';
 const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
 
-const User = require('../models/user');
+const User = mongoose.model('User');
 const configAuth = require('./auth');
 
 module.exports = function(passport) {
@@ -61,8 +62,6 @@ module.exports = function(passport) {
     callbackURL: configAuth.googleAuth.callbackUrl
   },
   function(token, refreshToken, profile, done) {
-
-    console.log(profile);
 
     process.nextTick(function() {
 
