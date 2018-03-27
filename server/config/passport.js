@@ -58,11 +58,16 @@ module.exports = function(passport) {
   passport.use(new GoogleStrategy({
     clientID : configAuth.googleAuth.clientId,
     clientSecret: configAuth.googleAuth.clientSecret,
-    callbackUrl: configAuth.googleAuth.callbackUrl
+    callbackURL: configAuth.googleAuth.callbackUrl
   },
   function(token, refreshToken, profile, done) {
+
+    console.log(profile);
+
     process.nextTick(function() {
+
       User.findOne({ 'google.id': profile.id }, function(err, user) {
+
         if (err) return done(err);
         if (user) {
           return done(null, user);
