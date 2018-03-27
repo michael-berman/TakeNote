@@ -1,27 +1,16 @@
 import express from 'express';
-import sessionController from './controllers/sessionController';
 import usersController from './controllers/usersController';
-import passport from 'passport';
+import authController from './controllers/authController';
 
 const router = express.Router();
 
-// session routes
-router.post('/session', sessionController.loginUser);
+// google routes
+router.get('/auth/google', authController.getGoogleAuth);
+router.get('/auth/google/callback', authController.getGoogleCallback);
+router.get('/logout', authController.logout);
 
 // user routes
 router.get('/users', usersController.getUsers);
-router.post('/users', usersController.createUser);
 
-// google routes
-router.get('/auth/google',
-  passport.authenticate('google', { scope: ['profile', 'email']})
-);
-
-router.get('/auth/google/callback',
-  passport.authenticate('google', {
-    successRedirect: '/',
-    failureRedirect: '/login'
-  })
-);
 
 module.exports = router;

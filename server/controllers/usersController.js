@@ -1,5 +1,4 @@
 import User from '../models/user';
-import passport from 'passport';
 
 // index
 exports.getUsers = (req, res) => {
@@ -15,13 +14,4 @@ exports.getUsers = (req, res) => {
 // Show
 exports.getUser = (req, res) => {
   // TODO: figure out how to find a user depending on request body
-};
-
-// Post
-exports.createUser = (req, res) => {
-  passport.authenticate('local-signup', {
-    successRedirect : '/',
-    failureRedirect : '/signup',
-    failureFlash: true
-  });
 };
