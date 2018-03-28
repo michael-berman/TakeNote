@@ -4,13 +4,13 @@ const Footer = () => (
   <div className="footer-wrapper">
     <a href="https://github.com/michael-berman/blue-prints" >
       <img className='github_icon'
-         src="../public/github_icon.png">
+         src="/assets/images/github_icon.png">
       </img>
     </a>
 
     <a href="https://www.linkedin.com/in/michaelvberman/" >
       <img className='linkedIn_icon'
-        src="../public/linkedIn_icon.png">
+        src="/assets/images/linkedIn_icon.png">
       </img>
     </a>
   </div>

@@ -14,7 +14,7 @@ require('dotenv').config({
 });
 
 app.use(express.static(path.join(__dirname, '../client/assets/')));
-app.use(express.static(path.join(__dirname, '../client/assets/stylesheets')));
+app.use(express.static(path.join(__dirname, '../client/')));
 
 require('./config/passport')(passport);
 app.use(session({ secret: process.env.SECRET }));
