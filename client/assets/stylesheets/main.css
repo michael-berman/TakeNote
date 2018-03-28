@@ -5,10 +5,18 @@
   background-color: black;
 }
 /* Session Form */
+
 button {
   background-color: green;
 }
 
-img {
-  height: 500px;
+/* Footer */
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-wrapper img {
+  height: 200px;
 }
