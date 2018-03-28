@@ -1,7 +1,9 @@
 import passport from 'passport';
 
 exports.getGoogleAuth = (req, res) => {
-  passport.authenticate('google', { scope: ['profile', 'email']})(req, res);
+  passport.authenticate('google', {
+    scope: ['profile', 'email']
+  })(req, res);
 };
 
 exports.getGoogleCallback = (req, res) => {
