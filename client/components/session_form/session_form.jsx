@@ -37,6 +37,7 @@ class SessionForm extends React.Component {
     return (
       <div className="session-form-container">
         <div className="session-form-header-wrapper">
+          <div className="fas fa-5x fa-pen-square session-logo"></div>
           <h1 className="session-form-header">{formHeader}</h1>
         </div>
         <div className="session-form-wrapper">

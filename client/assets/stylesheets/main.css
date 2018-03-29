@@ -6,7 +6,9 @@
 }
 /* Session Form */
 .session-form-header-wrapper {
-  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
 }
 
 .session-form-header {
@@ -18,9 +20,13 @@
   font-weight: 300;
 }
 
+.session-logo {
+  margin: 0 auto;
+}
+
 .session-form-container {
   background-color: #F3F3F3;
-  height: 400px;
+  min-height: 400px;
   padding-bottom: 50px;
 }
 
