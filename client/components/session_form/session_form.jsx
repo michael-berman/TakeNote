@@ -28,27 +28,42 @@ class SessionForm extends React.Component {
   render() {
     const formButton = (this.props.formType === "Signup") ?
       "Sign Up" : "Login";
+    const emailPlaceHolder = (this.props.formType === "Signup") ?
+      "Your Email Address" : "Email Address";
+    const passwordPlaceHolder = (this.props.formType === "Signup") ?
+      "Create a Password" : "Password";
     return (
-      <div className="session-form-wrapper">
-        <a href='/api/auth/google'><span class="fa fa-google-plus"></span>Google</a>
-        <form className="session-form-box">
-          <input type="text" value={this.state.email}
-            onChange={this.update('email')}
-            className="session-form-input" placeholder="Email"/>
-          <input type="password" value={this.state.password}
-            onChange={this.update('password')}
-            className="session-form-input" placeholder="password" />
-          <input type="submit" value={formButton}
-            onClick={this.handleSubmit}
-            className="session-form-submit" />
-        </form>
+      <div className="session-form-container">
+        <div className="session-form-header-wrapper">
+          <h1 className="session-form-header">{formButton}</h1>
+        </div>
+        <div className="session-form-wrapper">
+          <div className="google-signin-wrapper">
+              <a className="google-button" href='/api/auth/google'>
+                <span className="fab fa-lg fa-google google-img"></span>
+                <div className="google-inner" >Sign in with Google
+                </div>
+              </a>
+          </div>
+          <div className="session-form-horizontal-divider"> or
+          </div>
+          <form className="session-form-box">
+            <input type="text" value={this.state.email}
+              onChange={this.update('email')}
+              className="session-form-input"
+              placeholder={emailPlaceHolder}/>
+            <input type="password" value={this.state.password}
+              onChange={this.update('password')}
+              className="session-form-input"
+              placeholder={passwordPlaceHolder} />
+            <input type="submit" value={formButton}
+              onClick={this.handleSubmit}
+              className="session-form-submit" />
+          </form>
+        </div>
       </div>
     );
   }
 }
-
-// TODO: add classnames to form and input
-// TODO: add demo login
-
 
 export default withRouter(SessionForm);

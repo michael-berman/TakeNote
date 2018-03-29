@@ -5,9 +5,102 @@
   background-color: black;
 }
 /* Session Form */
+.session-form-header-wrapper {
 
-button {
-  background-color: green;
+}
+
+.session-form-header {
+  color: #6a6a6a;
+  text-align: center;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.session-form-container {
+  background-color: #F3F3F3;
+  height: 400px;
+}
+
+.session-form-wrapper {
+  margin: 0 auto;
+  max-width: 384px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.google-signin-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.google-button {
+  width: 77%;
+  height: 40px;
+  background-color: white;
+  border: solid 1px #d0d0d0;
+  border-radius: 7px;
+  color: #6a6a6a;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.google-button:hover {
+  cursor: pointer;
+}
+
+.google-img {
+  position: relative;
+  right: 30px;
+}
+
+.google-inner {
+  max-width: 280px;
+  font-size: 16px;
+  font-family: gotham, helvetica, arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #6a6a6a;
+  display: inline-block;
+  position: relative;
+}
+
+.session-form-horizontal-divider {
+  color: #ababab;
+  font-size: 14px;
+  font-family: gotham, helvetica, arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+}
+
+.session-form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.session-form-box input {
+  height: 30px;
+}
+
+.session-form-input {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 1.33em;
+  border: 1px solid #cacaca;
+  border-radius: 7px;
+  margin-bottom: 1em;
+}
+
+.session-form-submit {
+  width: 77%;
+  margin: 0 auto;
 }
 
 /* Footer */
