@@ -28,6 +28,8 @@ class SessionForm extends React.Component {
   render() {
     const formButton = (this.props.formType === "Signup") ?
       "Sign Up" : "Login";
+    const formHeader = (this.props.formType === "Signup") ?
+      "Create Account" : "Sign in";
     const emailPlaceHolder = (this.props.formType === "Signup") ?
       "Your Email Address" : "Email Address";
     const passwordPlaceHolder = (this.props.formType === "Signup") ?
@@ -35,7 +37,7 @@ class SessionForm extends React.Component {
     return (
       <div className="session-form-container">
         <div className="session-form-header-wrapper">
-          <h1 className="session-form-header">{formButton}</h1>
+          <h1 className="session-form-header">{formHeader}</h1>
         </div>
         <div className="session-form-wrapper">
           <div className="google-signin-wrapper">
@@ -45,7 +47,9 @@ class SessionForm extends React.Component {
                 </div>
               </a>
           </div>
-          <div className="session-form-horizontal-divider"> or
+          <div className="session-form-horizontal-divider">
+            <span className="left-divider"></span> or
+            <span className="right-divider"></span>
           </div>
           <form className="session-form-box">
             <input type="text" value={this.state.email}

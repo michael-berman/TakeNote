@@ -21,6 +21,7 @@
 .session-form-container {
   background-color: #F3F3F3;
   height: 400px;
+  padding-bottom: 50px;
 }
 
 .session-form-wrapper {
@@ -32,6 +33,7 @@
   border: 1px solid #dedede;
   border-radius: 2px;
   background-color: white;
+  padding: 10px 0;
 }
 
 .google-signin-wrapper {
@@ -80,7 +82,23 @@
   font-style: normal;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 20px;
+  display: flex;
+  width: 98%;
+  position: relative;
+  left: 5px;
+}
+
+.left-divider {
+  width: 135px;
+  margin: 10px 10px 10px 35px;
+  border-top: 1px solid #ababab;
+}
+
+.right-divider {
+  width: 135px;
+  margin: 10px 35px 10px 10px;
+  border-top: 1px solid #ababab;
 }
 
 .session-form-box {
@@ -88,21 +106,26 @@
   flex-direction: column;
 }
 
-.session-form-box input {
-  height: 35px;
-}
-
 .session-form-input {
-  width: 75%;
+  width: 71%;
   margin: 0 auto;
-  font-size: 1.33em;
+  font-size: 1em;
   border: 1px solid #cacaca;
   border-radius: 7px;
   margin-bottom: 1em;
+  height: 20px;
+  padding: 0.59375em 0.75em;
+}
+
+.session-form-input:focus {
+  box-shadow: 0 0 0 1px #7aa7cf, 0 0 4px 0 #3d96e3;
+  border-color: #7aa7cf;
+  outline: none;
 }
 
 .session-form-submit {
   width: 77%;
+  height: 40px;
   margin: 0 auto;
   margin-bottom: 1em;
   background-color: #2dbe60;
@@ -111,6 +134,10 @@
   border-radius: 7px;
   font-family: gotham, helvetica, arial, sans-serif;
   font-size: 1.2em;
+}
+
+.session-form-submit:hover {
+  cursor: pointer;
 }
 
 /* Footer */
