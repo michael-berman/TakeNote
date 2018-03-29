@@ -17,7 +17,7 @@
   font-size: 32px;
   line-height: 36px;
   font-family: caecilia, Times, serif;
-  font-weight: 300;
+  font-weight: lighter;
 }
 
 .session-logo {
@@ -146,13 +146,37 @@
   cursor: pointer;
 }
 
+.switch-session-form-wrapper {
+  margin: 0 auto;
+  padding-top: 40px;
+  text-align: center;
+  color: #747474;
+  line-height: 1.63636364;
+  font-family: gotham, helvetica, arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.91666667em;
+}
+
+.session-page-link {
+  font-family: gotham, helvetica, arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: #2dbe60;
+  text-decoration: none;
+}
+
 /* Footer */
 
 .footer-wrapper {
   display: flex;
   justify-content: space-evenly;
+  padding-top: 15px;
 }
 
 .footer-wrapper img {
-  height: 200px;
+  height: 100px;
+  border-radius: 5px;
 }

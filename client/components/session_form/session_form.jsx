@@ -26,14 +26,20 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    const formButton = (this.props.formType === "Signup") ?
-      "Sign Up" : "Login";
     const formHeader = (this.props.formType === "Signup") ?
       "Create Account" : "Sign in";
     const emailPlaceHolder = (this.props.formType === "Signup") ?
       "Your Email Address" : "Email Address";
     const passwordPlaceHolder = (this.props.formType === "Signup") ?
       "Create a Password" : "Password";
+    const formButton = (this.props.formType === "Signup") ?
+      "Sign Up" : "Login";
+    const switchPageHeader = (this.props.formType === "Signup") ?
+      "Already have an account?" : "Don't have an account?";
+    const switchPageLink = (this.props.formType === "Signup") ?
+        "/login" : "/signup";
+    const switchPageLinkName = (this.props.formType === "Signup") ?
+      "Sign in" : "Create Account";
     return (
       <div className="session-form-container">
         <div className="session-form-header-wrapper">
@@ -65,6 +71,12 @@ class SessionForm extends React.Component {
               onClick={this.handleSubmit}
               className="session-form-submit" />
           </form>
+        </div>
+        <div className="switch-session-form-wrapper">
+          {switchPageHeader}<br />
+        <Link className="session-page-link" to={switchPageLink}>
+          {switchPageLinkName}
+        </Link>
         </div>
       </div>
     );
