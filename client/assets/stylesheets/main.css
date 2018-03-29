@@ -86,7 +86,7 @@
 }
 
 .session-form-box input {
-  height: 30px;
+  height: 35px;
 }
 
 .session-form-input {
@@ -101,6 +101,13 @@
 .session-form-submit {
   width: 77%;
   margin: 0 auto;
+  margin-bottom: 1em;
+  background-color: #2dbe60;
+  border: 1px solid #1fae52;
+  color: white;
+  border-radius: 7px;
+  font-family: gotham, helvetica, arial, sans-serif;
+  font-size: 1.2em;
 }
 
 /* Footer */
