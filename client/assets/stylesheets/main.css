@@ -6,7 +6,7 @@
 }
 /* Session Form */
 .session-form-header-wrapper {
-
+  padding-top: 15px;
 }
 
 .session-form-header {
@@ -14,6 +14,8 @@
   text-align: center;
   font-size: 32px;
   line-height: 36px;
+  font-family: caecilia, Times, serif;
+  font-weight: 300;
 }
 
 .session-form-container {
@@ -78,6 +80,7 @@
   font-style: normal;
   font-weight: 400;
   text-align: center;
+  margin-bottom: 1em;
 }
 
 .session-form-box {
