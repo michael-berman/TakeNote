@@ -1,9 +1,16 @@
 const path = require("path");
 const webpack = require("webpack");
 
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var ExtractTextPluginConfig = new ExtractTextPlugin(
-    "index_bundle.css"
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
+    template: __dirname + '/client/index.html',
+    filename: 'index.html',
+    inject: 'body'
+});
+
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPluginConfig = new ExtractTextPlugin(
+    "index_style.css"
 );
 
 module.exports = {
@@ -16,13 +23,6 @@ module.exports = {
     filename: "bundle.js"
   },
   module: {
-    preLoaders: [
-      {
-        test: /\.css$/,
-        exclude: /styles/,
-        loader: 'import-glob-loader'
-      }
-    ],
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],
@@ -34,7 +34,8 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+        loader: ExtractTextPlugin.extract({fallback: "style-loader",
+                                          use: "css-loader"})
       }
     ]
   },

@@ -1,11 +1,4 @@
-/* TODO: modulate css files and bundle into one using webpack */
-
-#root p{
-  color: blue;
-  background-color: black;
-}
-/* Session Form */
-/* .session-form-header-wrapper {
+.session-form-header-wrapper {
   display: flex;
   flex-direction: column;
   padding-top: 40px;
@@ -166,17 +159,4 @@
   line-height: 18px;
   color: #2dbe60;
   text-decoration: none;
-} */
-
-/* Footer */
-
-/* .footer-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  padding-top: 15px;
 }
-
-.footer-wrapper img {
-  height: 100px;
-  border-radius: 5px;
-} */

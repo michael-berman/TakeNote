@@ -1,0 +1,10 @@
+.footer-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 15px;
+}
+
+.footer-wrapper img {
+  height: 100px;
+  border-radius: 5px;
+}
