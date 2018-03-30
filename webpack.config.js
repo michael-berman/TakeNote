@@ -8,12 +8,21 @@ var ExtractTextPluginConfig = new ExtractTextPlugin(
 
 module.exports = {
   context: __dirname,
-  entry: "./client/take_note.jsx",
+  entry: ["./client/take_note.jsx",
+          "./client/index_style.css"
+          ],
   output: {
     path: path.resolve(__dirname, 'client'),
     filename: "bundle.js"
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.css$/,
+        exclude: /styles/,
+        loader: 'import-glob-loader'
+      }
+    ],
     loaders: [
       {
         test: [/\.jsx?$/, /\.js?$/],
@@ -24,7 +33,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/, 
+        test: /\.css$/,
         loader: ExtractTextPlugin.extract("style-loader", "css-loader")
       }
     ]
