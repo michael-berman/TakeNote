@@ -1,5 +1,4 @@
 import $ from 'jquery';
-// TODO: Create ajax requests for signup, login, logout
 
 export const login = user => {
   return (

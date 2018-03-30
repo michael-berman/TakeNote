@@ -1,6 +1,11 @@
 const path = require("path");
 const webpack = require("webpack");
 
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var ExtractTextPluginConfig = new ExtractTextPlugin(
+    "index_bundle.css"
+);
+
 module.exports = {
   context: __dirname,
   entry: "./client/take_note.jsx",
@@ -23,5 +28,8 @@ module.exports = {
   devtool: 'source-map',
   resolve: {
     extensions: [".js", ".jsx", "*"]
-  }
+  },
+  plugins: [
+    ExtractTextPluginConfig
+  ]
 };
